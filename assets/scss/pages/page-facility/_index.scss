@@ -1,0 +1,261 @@
+.facility-page {
+  background-color: $bgPrimary;
+  margin-top: toRem(105);
+  @media (max-width: $tablet) {
+    margin-top: toRem(80);
+  }
+  // .facility-page__hero
+  &__hero {
+  }
+
+  // .facility-page__service
+  &__service {
+    @include adaptiveValue('padding-bottom', 100, 0);
+  }
+
+  // .facility-page__design
+  &__design {
+    @include adaptiveValue('padding-top', 100, 80);
+    @include adaptiveValue('padding-bottom', 200, 80);
+  }
+
+  &__touch{
+    @include adaptiveValue('padding-bottom', 200, 80);
+  }
+}
+
+.text-hero-section {
+  // .text-hero-section__container
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: percent(507, 1860) auto;
+    @media (max-width: $mobile) {
+      grid-template-columns: auto;
+    }
+  }
+  // .text-hero-section__title
+  &__title {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 150, 60, 0, 1920, 375);
+    line-height: em(130, 150);
+    color: $textYellow;
+    z-index: 1;
+  }
+  // .text-hero-section__left
+  &__left {
+  }
+  // .text-hero-section__sub-title
+  &__sub-title {
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 60, 24, 0, 1920, 375);
+    text-transform: capitalize;
+    color: $textSecondary;
+    @include adaptiveValue('padding-top', 330, 220, 0, 1920, 998);
+    @include adaptiveValue('padding-bottom', 250, 90, 0, 1920, 998);
+    @media (max-width: $mobile) {
+      padding-bottom: 40px;
+    }
+  }
+  // .text-hero-section__right
+  &__right {
+    display: flex;
+    justify-content: end;
+    @include adaptiveValue('padding-top', 330, 220, 0, 1920, 998);
+    @include adaptiveValue('padding-bottom', 250, 60, 0, 1920, 998);
+    position: relative;
+    @media (max-width: $mobile) {
+      padding-top: 0;
+    }
+  }
+  // .text-hero-section__decore-vetical-line
+  &__decore-vetical-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include adaptiveValue('width', 1384, 275, 0, 1920, 375);
+    @include adaptiveValue('height', 696, 139, 0, 1920, 375);
+  }
+  // .text-hero-section__decore-rainbow
+  &__decore-rainbow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+  }
+  // .text-hero-section__text
+  &__text {
+    @include adaptiveValue('font-size', 18, 13, 0, 1920, 375);
+    @include adaptiveValue('margin-right', 250, 10, 0, 1920, 375);
+    max-width: 350px;
+    line-height: em(28, 18);
+    color: $textSecondary-8;
+  }
+}
+
+.service-section {
+  // .service-section__container
+  &__container {
+  }
+  // .service-section__box
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr percent(600, 1860);
+    @include adaptiveValue('column-gap', 30, 20, 0, 1920, 992);
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+    }
+  }
+  // .service-section__left-img
+  &__left-img-ibg {
+    aspect-ratio: 1230/800;
+    @include adaptiveValue('margin-bottom', 150, 60, 0, 1920, 992);
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  // .service-section__sub-title
+  &__sub-title {
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 50, 30, 0, 1920, 375);
+    @include adaptiveValue('letter-spacing', 1.08, 0.9, 0, 1920, 375);
+    text-transform: capitalize;
+    color: $textSecondary;
+    margin-bottom: 40px;
+    @include adaptiveValue('margin-bottom', 40, 20, 0, 1920, 375);
+  }
+  // .service-section__text
+  &__text {
+    max-width: 440px;
+    @include adaptiveValue('font-size', 18, 13, 0, 1920, 375);
+    line-height: em(28, 18);
+    color: $textSecondary-8;
+  }
+  // .service-section__info
+  &__info {
+  }
+  // .service-section__right-img
+  &__right-img-ibg {
+    aspect-ratio: 600/600;
+    @include adaptiveValue('margin-bottom', 100, 40, 0, 998, 375);
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+}
+
+.design-section {
+  // .design-section__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  // .design-section__box
+  &__box {
+    display: grid;
+    grid-template-columns: auto percent(1072, 1860);
+    @include adaptiveValue('column-gap', 340, 150, 0, 1920, 998);
+    row-gap: toRem(30);
+    @include adaptiveValue('padding-bottom', 40, 20, 0, 1920, 998);
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+    }
+  }
+  // .design-section__left-img-ibg
+  &__left-img-ibg {
+    aspect-ratio: 442/595;
+    @media (max-width: $tablet) {
+      aspect-ratio: unset;
+      @include adaptiveValue('height', 337, 232, 0, 998, 375);
+      margin-bottom: toRem(30);
+    }
+  }
+  // .design-section__right-img-ibg
+  &__right-img-ibg {
+    aspect-ratio: 1067/595;
+  }
+  // .design-section__title
+  &__title {
+    align-self: end;
+    max-width: toRem(560);
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 40, 30, 0, 1920, 375);
+    @include adaptiveValue('letter-spacing', 1.2, 0.9, 0, 1920, 375);
+    color: $textSecondary;
+    @include adaptiveValue('margin-right', 110, 0, 0, 1920, 998);
+    @include adaptiveValue('padding-bottom', 100, 70, 0, 1920, 375);
+  }
+  // .design-section__info
+  &__info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: toRem(30);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      @include adaptiveValue('row-gap', 80, 50);
+    }
+  }
+  // .design-section__label
+  &__label {
+    max-width: toRem(230);
+    @include adaptiveValue('font-size', 18, 14, 0, 1920, 375);
+    text-transform: uppercase;
+    color: $textYellow;
+  }
+  // .design-section__row
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    gap: toRem(20);
+    max-width: toRem(355);
+    padding-top: toRem(50);
+    @media (max-width: $tablet) {
+      align-self: flex-end;
+      padding-top: 0;
+    }
+  }
+  // .design-section__sub-title
+  &__sub-title {
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 36, 30, 0, 998, 375);
+    letter-spacing: em(1.08, 36);
+    color: $textSecondary;
+    text-transform: capitalize;
+  }
+  // .design-section__text
+  &__text {
+    font-size: toRem(13);
+    @include adaptiveValue('font-size', 18, 13, 0, 1920, 375);
+    line-height: em(23, 18);
+    color: $textSecondary-8;
+  }
+  // .design-section__decore-wave
+  &__decore-wave {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: toRem(300);
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &____box-mobile {
+    display: none;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+}

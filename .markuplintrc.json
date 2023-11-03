@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "markuplint:recommended"
+  ],
+  "parser": {
+    ".php$": "@markuplint/php-parser"
+  },
+  "excludeFiles": [
+    "./vendor/*",
+    "./node_modules/*"
+  ],
+  "rules": {
+    "permitted-contents": false,
+    "require-accessible-name": false,
+    "character-reference": false,
+    "required-h1": false
+  },
+  "nodeRules": [
+    {
+      "selector": "body",
+      "rules": {
+        "required-attr": false
+      }
+    },
+    {
+      "selector": "img",
+      "rules": {
+        "required-attr": false
+      }
+    }
+  ]
+}

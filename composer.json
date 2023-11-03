@@ -1,0 +1,38 @@
+{
+  "name": "yevhenii/starter-theme-wp",
+  "type": "theme",
+  "keywords": [
+    "WordPress",
+    "Themes"
+  ],
+  "description": "Wordpress Starter Theme by Docker & Vite",
+  "authors": [
+    {
+      "name": "Volosiuk Yevhenii",
+      "email": "volosiukweb@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "StarterThemeWp\\STW\\": "includes/"
+    },
+    "files": [
+      "includes/Helpers/global-helpers.php",
+      "includes/Helpers/variables.php"
+    ]
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "squizlabs/php_codesniffer": "^3.7",
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

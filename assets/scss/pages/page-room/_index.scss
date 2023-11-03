@@ -1,0 +1,296 @@
+.page-room {
+  margin-top: toRem(105);
+
+  @media (max-width: $tablet) {
+    margin-top: toRem(80);
+  }
+  // .page-room__full-hero
+  &__full-hero {
+    position: relative;
+    min-height: calc(100vh - 105px);
+
+    @media (max-width: $tablet) {
+      min-height: calc(100vh - 80px);
+    }
+  }
+
+  // .page-room__description
+  &__description {
+    @include adaptiveValue('padding-top', 200, 80);
+    @include adaptiveValue('padding-bottom', 135, 50);
+  }
+
+  // .page-room__preview
+  &__preview {
+  }
+
+  // .page-room__cards
+  &__cards {
+    @include adaptiveValue('padding-top', 300, 100);
+  }
+
+  &__touch {
+    @include adaptiveValue('padding-top', 300, 80);
+    @include adaptiveValue('padding-bottom', 200, 80);
+  }
+}
+
+.full-section-hero {
+  position: relative;
+  // full-section-hero__container
+  &__container {
+    position: relative;
+    min-height: calc(100vh - 105px);
+    display: flex;
+    justify-content: space-between;
+    padding-top: toRem(50);
+    padding-bottom: toRem(50);
+    @media (max-width: $tablet) {
+      min-height: calc(100vh - 80px);
+    }
+  }
+  // full-section-hero__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: toRem(30);
+  }
+  // full-section-hero__title
+  &__title {
+    font-family: $fontMiracle;
+    max-width: em(700, 140);
+    @include adaptiveValue('font-size', 150, 80, 0, 1920, 320);
+    line-height: em(130, 150);
+    color: $textYellow;
+    overflow-wrap: anywhere;
+  }
+  // full-section-hero__text
+  &__text {
+    max-width: toRem(420);
+    @include adaptiveValue('font-size', 26, 18, 0, 1920, 998);
+    text-transform: uppercase;
+    color: $textYellow;
+    margin-bottom: toRem(140);
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  // full-section-hero__book-room-button
+  &__book-room-button {
+    position: absolute;
+    bottom: toRem(50);
+    right: toRem(30);
+  }
+  // full-section-hero__image
+  &__image-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__decore{
+    position: absolute;
+    top: 250px;
+    bottom: 0;
+    width: 100%;
+    height: toRem(565);
+    @media (min-width: toRem(1920)){
+       display: none;
+    }
+  }
+}
+
+.description-section {
+  background-color: $bgPrimary;
+  // .description-section__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+    column-gap: toRem(25);
+    max-width: toRem(1545);
+    margin: 0 auto;
+    color: $textSecondary;
+  }
+  // .description-section__left
+  &__left {
+    margin-bottom: toRem(45);
+  }
+  // .description-section__since-year
+  &__since-year {
+    @include adaptiveValue('margin-bottom', 100, 50);
+  }
+  // .description-section__sub-title
+  &__sub-title {
+    max-width: toRem(760);
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 50, 30, 0, 1440, 320);
+    line-height: em(60, 50);
+    @include adaptiveValue('letter-spacing', 1.5, 0.9, 0, 1440, 320);
+    @media (max-width: $tablet) {
+      max-width: toRem(600);
+    }
+  }
+  // .description-section__right
+  &__right {
+    align-self: flex-end;
+    @media (max-width: $tablet) {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 1 100%;
+    }
+  }
+  // .description-section__text
+  &__text {
+    max-width: toRem(350);
+    color: $textSecondary-8;
+    @include adaptiveValue('font-size', 18, 13, 0, 1440, 320);
+    line-height: em(28, 18);
+  }
+}
+
+.preview-section {
+  position: relative;
+  background-color: $bgPrimary;
+  @include adaptiveValue('padding-top', 65, 30, 0, 1920, 375);
+  min-height: 100vh;
+  // .preview-section__container
+  &__container {
+    position: relative;
+    min-height: calc(100vh - 105px);
+    padding: 0;
+    @media (max-width: $tablet) {
+      min-height: calc(100vh - 80px);
+    }
+  }
+  // .preview-section__title
+  &__title {
+    @include adaptiveValue('font-size', 40, 20, 0, 1920, 375);
+    text-transform: capitalize;
+    color: $textYellow;
+    @include adaptiveValue('margin-bottom', 100, 50, 0, 1920, 375);
+    @include adaptiveValue('padding-left', 188, 15, 0, 1920, 375);
+    padding-right: toRem(15);
+  }
+  // .preview-section__fullscreen-img
+  &__fullscreen-img-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    img {
+      object-position: left bottom;
+      @media (max-width: $tablet) {
+        object-position: 90% center;
+      }
+    }
+  }
+
+  .decore-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include adaptiveValue('width', 1920, 375, 0, 1920, 375);
+    @include adaptiveValue('height', 643, 165, 0, 1920, 375);
+    z-index: 1;
+  }
+}
+
+.cards-section {
+  // .cards-section__container
+  &__container {
+    max-width: toRem(1545);
+    margin: 0 auto;
+  }
+  // .cards-section__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(50);
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+  }
+
+  // .cards-section__img-ibg
+  &__img-ibg {
+    aspect-ratio: 600/600;
+    @include adaptiveValue('margin-bottom', 60, 80, 0, 1920, 375);
+  }
+  // .cards-section__text
+  &__text {
+    flex: 1 1 auto;
+    line-height: em(28, 18);
+    color: $textPrimary-8;
+    max-width: toRem(350);
+    @media (max-width: $tablet) {
+      margin-bottom: toRem(50);
+    }
+  }
+  // .cards-section__column
+  &__column {
+    flex: 0 1 600px;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+
+      .cards-section__text {
+        margin-bottom: toRem(50);
+      }
+
+      .cards-section__img-ibg {
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+    &:last-child {
+      @media (max-width: $tablet) {
+        flex: 1 1 100%;
+      }
+      .cards-section__img-ibg {
+        aspect-ratio: 600/800;
+      }
+      .cards-section__text {
+        max-width: toRem(445);
+        @media (max-width: $tablet) {
+          margin-bottom: toRem(50);
+        }
+      }
+
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  // .cards-section__title
+  &__title {
+    font-family: $fontMiracle;
+    font-size: 36px;
+    letter-spacing: 1.08px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+  }
+  // .cards-section__book-room-small
+  &__book-room-small {
+    max-width: toRem(255);
+    font-size: 26px;
+    text-transform: uppercase;
+    color: $textPrimary;
+    padding: em(19, 26) em(39, 26) em(15, 26) em(39, 26);
+    border-radius: toRem(100);
+    border: 1px solid $borderPrimary-8;
+    @media (max-width: $tablet) {
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// <INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	appearance: none;
+}
+
+// font-size: toRem(16);
+//          font-weight: 500;
+//          line-height: math.div(20 , 16);
+//          text-transform: uppercase;
+//          color: $bgPrimary;
+// .input {
+//  display: block;
+//  width: 100%;
+//  padding: 0 20px;
+//  border: 1px solid #eeeeee;
+//  border-radius: 0 !important;
+//  &._form-focus {
+//  }
+//  &._form-error {
+//  }
+// }
+// .input[placeholder]:not([data-placeholder-nohiden]) {
+//  &::placeholder {
+//    transition: opacity 0.3s;
+//  }
+//  &:focus::placeholder {
+//    opacity: 0;
+//  }
+// }
+
+// .reservation-form__input
+.reservation-form__input {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: toRem(16);
+	font-weight: 500;
+	line-height: math.div(20, 16);
+	color: $textPrimary;
+	text-transform: uppercase;
+	//border-radius: 0 !important;
+
+	@include adaptiveValue("padding-left", 40, 30);
+	@include adaptiveValue("padding-right", 40, 30);
+
+	//  &._form-focus {
+	//  }
+	//  &._form-error {
+	//  }
+	&--text-white {
+		color: $textSecondary;
+	}
+}
+
+.reservation-form__input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		color: $textPrimary;
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+}
+
+.reservation-form__input--text-white[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		color: $textSecondary;
+	}
+}
+
+textarea.input {
+	padding: 0;
+	resize: none;
+}

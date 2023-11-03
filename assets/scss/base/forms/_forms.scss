@@ -1,0 +1,153 @@
+// <FORM>
+// Сніппет (HTML):
+// .form {
+//  &__row {
+//  }
+//  &__column {
+//  }
+//  &__line {
+//  }
+//  &__input {
+//  }
+//  &__button {
+//  }
+//  &__error {
+//  }
+// }
+
+.reservation-form {
+	// .reservation-form__inner
+	&__inner {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	// .reservation-form__label
+	&__label {
+		margin-bottom: toRem(50);
+		font-size: 26px;
+		text-transform: uppercase;
+
+		&--disable {
+			display: none;
+		}
+	}
+
+	// .reservation-form__form
+	&__form {
+		// .reservation-form__form
+	}
+
+	// .reservation-form__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr) toRem(285);
+		max-width: toRem(935);
+		min-height: toRem(140);
+		border: 1px solid $bgPrimary;
+
+		&--border-transparent {
+			border: 0 solid transparent;
+		}
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(3, minmax(auto, 1fr));
+		}
+	}
+
+	// .reservation-form__column
+	&__column {
+		position: relative;
+
+		svg {
+			position: absolute;
+			top: 47%;
+			right: toRem(40);
+		}
+
+		&:first-child {
+			&::before {
+				position: absolute;
+				right: 0;
+				bottom: 27%;
+				width: 1px;
+				height: toRem(60);
+				content: "";
+				background-color: $bgPrimary-24;
+			}
+		}
+
+		&--line-white {
+			&:first-child {
+				&::before {
+					background-color: $bgSecondary-24;
+				}
+			}
+		}
+
+		&--bg-blur {
+			opacity: 0.9;
+			background-color: #44524B;
+			backdrop-filter: blur(20px);
+      background-color: #44524B;
+		}
+
+    &--bg-blur-green {
+      background-color: #44524B;
+		}
+	}
+
+	// .reservation-form__button
+	&__button {
+		font-weight: 500;
+		line-height: math.div(20, 18);
+		color: $textSecondary;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: $bgPrimary;
+		border: 1px solid $borderPrimary;
+    &.--button-yellow{
+      background-color: $bgYellow;
+      color: $textPrimary;
+    }
+  }
+}
+
+// </FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";

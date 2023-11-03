@@ -1,0 +1,354 @@
+.front-page {
+  width: 100%;
+  height: 100%;
+  margin-top: toRem(105);
+
+  @media (max-width: $tablet) {
+    margin-top: toRem(80);
+  }
+
+  &__hero {
+  }
+
+  &__book {
+  }
+
+  &__about {
+  }
+
+  &__touch {
+    @include adaptiveValue('padding-top', 300, 80);
+    @include adaptiveValue('padding-bottom', 200, 80);
+  }
+}
+
+// Hero Section ===============================================================================================================================================================================================================================================================================================
+.section-hero {
+  @include adaptiveValue('padding-top', 40, 10);
+
+  background-color: $bgPrimary;
+
+  //  background-color: green;
+  // .section-hero__container
+  &__container {
+    // .section-hero__container
+  }
+
+  // .section-hero__content
+  &__content {
+    display: grid;
+    grid-template-columns: percent(976, 1860) percent(600, 1860);
+
+    @include adaptiveValue('column-gap', 284, 90, 0, 1920, 768);
+    @include adaptiveValue('padding-bottom', 95, 40);
+
+    @media (max-width: $mobile) {
+      grid-template-rows: 1fr;
+      grid-template-columns: auto;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // .section-hero__info
+  &__info {
+    // padding-right: 284px;
+    // margin-right: 284px;
+  }
+
+  // .section-hero__title
+  &__title {
+    font-family: $fontMiracle;
+
+    @include adaptiveValue('font-size', 220, 65, 0, 1920, 480);
+
+    line-height: math.div(200, 220);
+    color: $textSecondary;
+
+    @include adaptiveValue('margin-bottom', 60, 20, 0, 1920, 768);
+
+    span {
+      color: $textYellow;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(24);
+    }
+  }
+
+  // .section-hero__services
+  &__services {
+    color: $textYellow;
+
+    @include adaptiveValue('font-size', 26, 10, 0, 1920, 480);
+
+    text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(24);
+    }
+  }
+
+  // .section-hero__history
+  &__history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include adaptiveValue('row-gap', 96, 20, 0, 1920, 992);
+
+    @media (max-width: $mobile) {
+      align-items: center;
+    }
+  }
+
+  // .section-hero__year
+  &__year {
+    @include adaptiveValue('margin-top', 38, 20, 0, 1920, 992);
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .section-hero__text
+  &__text {
+    @include adaptiveValue('font-size', 18, 14);
+
+    max-width: toRem(350);
+    //line-height: 155.555%;
+    color: $textSecondary-8;
+
+    @media (max-width: $mobile) {
+      max-width: toRem(291);
+      padding-top: toRem(24);
+      text-align: center;
+      border-top: 1px solid $borderSecondary-12;
+    }
+  }
+
+  // .section-hero__slider
+  &__slider {
+    // .section-hero__slider
+  }
+}
+
+// Fullscreen Hero ===============================================================================================================================================================================================================================================================================================
+.section-book {
+  position: relative;
+  padding-bottom: toRem(100);
+  background-color: $bgPrimary;
+
+  // section-book__container
+  &__container {
+  }
+
+  // section-book__image
+  &__image-ibg {
+    @include adaptiveValue('min-height', 780, 450, 0, 1920, 480);
+  }
+
+  // section-book__form
+  &__form {
+    position: absolute;
+    bottom: toRem(100);
+    @include adaptiveValue('right', 30, 10, 0, 992, 480);
+    @include adaptiveValue('margin-left', 30, 10, 0, 992, 480);
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: 0;
+      @include adaptiveValue('right', 30, 10, 0, 992, 480);
+    }
+  }
+}
+
+// About Us ===============================================================================================================================================================================================================================================================================================
+.section-about {
+  background-color: $bgPrimary;
+  @include adaptiveValue('padding-bottom', 300, 100);
+  color: $textSecondary;
+
+  // .section-about__container
+  &__container {
+  }
+  // .section-about__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue('font-size', 26, 12, 0, 1920, 480);
+    text-transform: uppercase;
+    @include adaptiveValue('margin-bottom', 115, 50, 0, 1920, 480);
+    @media (max-width: $mobile) {
+      flex-direction: row-reverse;
+    }
+  }
+  // .section-about__info
+  &__info {
+    @media (max-width: $mobile) {
+      text-align: right;
+    }
+  }
+  // .section-about__phone
+  &__phone {
+    display: inline-block;
+    text-decoration-line: underline;
+    color: $textYellow;
+    padding-bottom: toRem(15);
+  }
+  // .section-about__address
+  &__address {
+    text-decoration-line: underline;
+    @media (max-width: $mobile) {
+      line-height: 1.5;
+    }
+  }
+  // .section-about__label
+  &__label {
+    max-width: toRem(250);
+    font-style: italic;
+    text-align: right;
+    @media (max-width: $mobile) {
+      max-width: toRem(140);
+      text-align: left;
+    }
+  }
+  // .section-about__content
+  &__content {
+  }
+  // .section-about__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(350px, 1410px) 1fr;
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+    }
+  }
+  // .section-about__content-left
+  &__content-left {
+    @include adaptiveValue('padding-top', 150, 100, 0, 1920, 998);
+  }
+  // .section-about__content-right
+  &__content-right {
+    @include adaptiveValue('padding-top', 150, 100, 0, 1920, 998);
+  }
+}
+.left-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    row-gap: toRem(50);
+  }
+
+  .decor-vertical-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include adaptiveValue('height', 1300, 815, 0, 1920, 998);
+    @media (max-width: $tablet) {
+      @include adaptiveValue('height', 815, 350, 0, 998, 480);
+    }
+  }
+
+  .decor-rainbow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include adaptiveValue('width', 1419, 753, 0, 1920, 998);
+    @include adaptiveValue('height', 714, 379, 0, 1920, 998);
+  }
+
+  .decor-horizontal-line {
+    position: absolute;
+    top: 0;
+    right: -37%;
+    @include adaptiveValue('width', 1190, 623, 0, 1920, 998);
+    height: 2px;
+    @media (max-width: $tablet) {
+      right: 0;
+    }
+  }
+
+  // .left-content__image
+  &__image-ibg {
+    z-index: 1;
+    @include adaptiveValue('min-width', 605, 300, 0, 1920, 480);
+    @include adaptiveValue('height', 850, 350, 0, 1920, 480);
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  // .left-content__title
+  &__title {
+    position: absolute;
+    z-index: 10;
+    @include adaptiveValue('top', 185, 70, 0, 1920, 998);
+    @include adaptiveValue('right', 115, 190, 0, 1920, 998);
+    display: inline-grid;
+    justify-items: end;
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 150, 60, 0, 1920, 480);
+    @include adaptiveValue('line-height', 130, 80, 0, 1920, 998);
+    text-transform: uppercase;
+    span {
+      color: $textYellow;
+    }
+    @media (max-width: $mobile) {
+      position: relative;
+      top: 0;
+      right: 0;
+      color: $textYellow;
+    }
+  }
+  // .left-content__content
+  &__content {
+    align-self: flex-end;
+    @include adaptiveValue('padding-left', 25, 100, 0, 1920, 998);
+    @include adaptiveValue('padding-right', 158, 0, 0, 1920, 998);
+    @media (max-width: $mobile) {
+      align-self: auto;
+      padding-left: 0;
+    }
+  }
+  // .left-content__sub-title
+  &__sub-title {
+    font-family: $fontMiracle;
+    @include adaptiveValue('font-size', 50, 30, 0, 1920, 480);
+    @include adaptiveValue('line-height', 60, 30, 0, 1920, 480);
+    letter-spacing: 1.5px;
+    @include adaptiveValue('letter-spacing', 1.5, 0.84, 0, 1920, 480);
+    text-transform: capitalize;
+    margin-bottom: toRem(40);
+  }
+  // .left-content__text
+  &__text {
+    max-width: toRem(445);
+    line-height: em(23, 18);
+    opacity: 0.64;
+    @include adaptiveValue('font-size', 18, 13, 0, 1920, 480);
+  }
+}
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include adaptiveValue('padding-left', 155, 75, 0, 1920, 768);
+  justify-self: end;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  // .right-content__image
+  &__image-ibg {
+    @include adaptiveValue('width', 315, 160, 0, 1920, 998);
+    @include adaptiveValue('height', 415, 215, 0, 1920, 998);
+  }
+  // .right-content__button
+  &__button {
+    //.right-content__button
+  }
+}

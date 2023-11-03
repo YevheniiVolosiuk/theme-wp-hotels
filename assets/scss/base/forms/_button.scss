@@ -1,0 +1,114 @@
+// <BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+// .button {
+//  display: inline-flex;
+//  padding: 0;
+//  @media (any-hover: hover) {
+//    &:hover {
+//    }
+//  }
+//  &._fw {
+//    width: 100%;
+//  }
+// }
+
+// .reservation-form__button
+.reservation-form__button {
+	font-weight: 500;
+	line-height: math.div(20, 18);
+	color: $textSecondary;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $bgPrimary;
+	border: 1px solid $borderPrimary;
+
+	@media (any-hover: hover) {
+		&:hover {
+			// .reservation-form__button hover
+		}
+	}
+
+	&--bg-yellow {
+		background-color: $bgYellow;
+		border: 1px solid transparent;
+		color: $textPrimary;
+	}
+}
+
+// .book-room-button
+.book-room-button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+
+	@include adaptiveValue("width", 200, 120);
+	@include adaptiveValue("height", 200, 120);
+	@include adaptiveValue("font-size", 20, 14);
+
+	margin: 0 20px 20px 0;
+
+	font-style: italic;
+
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		color: $textYellow;
+	}
+
+	&--disable {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+	&--disable-margin {
+		margin: 0;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				color: $hoverAccent;
+			}
+		}
+	}
+}
+
+.room-and-apartments-button {
+	position: relative;
+	display: inline-block;
+	@include adaptiveValue("font-size", 18, 14, 0, 1920, 998);
+
+	@include adaptiveValue("padding-top", 50, 40, 0, 1920, 998);
+	@include adaptiveValue("padding-right", 60, 45, 0, 1920, 998);
+	@include adaptiveValue("padding-bottom", 98, 25, 0, 1920, 998);
+	@include adaptiveValue("padding-left", 60, 50, 0, 1920, 998);
+
+	@include adaptiveValue("width", 200, 150, 0, 1920, 998);
+	@include adaptiveValue("height", 200, 150, 0, 1920, 998);
+	color: $textYellow;
+	span {
+		display: inline-block;
+		text-align: center;
+		color: $textSecondary;
+	}
+	.circle {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.arrow-down {
+		position: absolute;
+		@include adaptiveValue("width", 26, 20, 0, 1920, 998);
+		@include adaptiveValue("height", 16, 13, 0, 1920, 998);
+		@include adaptiveValue("bottom", 40, 20, 0, 1920, 998);
+		bottom: 40px;
+		@include adaptiveValue("right", 86, 66, 0, 1920, 998);
+	}
+}

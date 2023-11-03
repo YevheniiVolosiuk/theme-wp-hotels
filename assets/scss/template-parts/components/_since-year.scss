@@ -1,0 +1,25 @@
+.since-year {
+	// .since-year__box
+	&__box {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: em(10) em(50) em(10) em(30);
+		border: 1px solid $borderSecondary-32;
+		border-radius: toRem(50);
+
+		@include adaptiveValue("font-size", 22, 15, 0, 1920, 992);
+
+		span {
+			color: $textSecondary;
+			text-transform: capitalize;
+			text-wrap: nowrap;
+		}
+
+		svg {
+			width: em(35);
+			height: em(35);
+			margin-right: em(23);
+		}
+	}
+}

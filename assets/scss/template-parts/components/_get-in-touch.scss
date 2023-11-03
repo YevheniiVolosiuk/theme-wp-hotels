@@ -1,0 +1,139 @@
+.section-touch {
+  position: relative;
+
+  .--text-white {
+    color: $textSecondary;
+  }
+
+  // .section-touch__decor-line
+  &__decor-line {
+    position: absolute;
+    bottom: 38%;
+    left: 0;
+    width: 100%;
+    height: toRem(563);
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .section-touch__container
+  &__container {
+  }
+
+  // .section-touch__info
+  &__info {
+    @include adaptiveValue('margin-bottom', 160, 50);
+  }
+
+  // .section-touch__inner
+  &__inner {
+    @include adaptiveValue('min-height', 175, 100, 0, 768, 480);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // .section-touch__phone
+  &__phone {
+    position: relative;
+    align-self: start;
+    justify-self: start;
+
+    @include adaptiveValue('font-size', 50, 16, 0, 1920, 480);
+
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      background-color: $borderPrimary-48;
+    }
+    .--bg-line-opacity::after {
+      background-color: $bgSecondary-2;
+    }
+  }
+
+  // .section-touch__address
+  &__address {
+    align-self: end;
+    justify-self: end;
+    max-width: toRem(240);
+    text-transform: uppercase;
+
+    @include adaptiveValue('font-size', 26, 16, 0, 768, 480);
+    @include adaptiveValue('max-width', 250, 170, 0, 768, 480);
+    @include adaptiveValue('margin-right', 200, 100, 2, 1920, 768);
+  }
+
+  // .section-touch__content
+  &__content {
+    margin-bottom: toRem(70);
+
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(0);
+    }
+  }
+
+  // .section-touch__reservation
+  &__reservation {
+    margin-top: toRem(-80);
+  }
+}
+
+.content-touch {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  // .content-touch__left
+  &__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    font-family: $fontMiracle;
+    text-transform: uppercase;
+
+    .--text-white {
+      color: $textSecondary;
+    }
+
+    @include adaptiveValue('font-size', 300, 84);
+
+    svg {
+      width: em(150, 300);
+      height: em(150, 300);
+
+      @include adaptiveValue('margin-left', 40, 30, 2, 992, 480);
+    }
+  }
+
+  // .content-touch__right
+  &__right {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    font-family: $fontMiracle;
+    color: $textYellow;
+    text-transform: uppercase;
+
+    @include adaptiveValue('bottom', 0, 120, 0, 992, 480);
+    @include adaptiveValue('font-size', 300, 84);
+  }
+
+  // .content-touch__image-ibg
+  &__image-ibg {
+    width: 100%;
+
+    @include adaptiveValue('min-height', 445, 150);
+    @include adaptiveValue('max-width', 445, 150);
+    @include adaptiveValue('margin-bottom', 155, 80, 2, 1920, 768);
+    @include adaptiveValue('margin-top', 65, 140, 0, 1920, 480);
+    @include adaptiveValue('margin-right', 155, 10, 2, 1920, 768);
+  }
+}
