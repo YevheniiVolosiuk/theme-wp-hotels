@@ -21,7 +21,8 @@
     },
     "files": [
       "includes/Helpers/global-helpers.php",
-      "includes/Helpers/variables.php"
+      "includes/Helpers/variables.php",
+      "includes/Helpers/vite-assets.php"
     ]
   },
   "require-dev": {

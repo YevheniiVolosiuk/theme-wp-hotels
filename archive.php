@@ -8,3 +8,6 @@
  */
 
 declare(strict_types=1);
+
+
+echo 'It is archive.php file';

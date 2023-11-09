@@ -25,6 +25,7 @@ $fontSize: toRem(18); // де 18(px) - розмір шрифту за замов
 
 // Палітра кольорів
 @import "base/colors-palette";
+@import "base/variables";
 
 // Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
 
@@ -72,6 +73,7 @@ $responsiveType: 1;
 @import "template-parts/components/since-year";
 @import "template-parts/components/get-in-touch";
 @import "template-parts/components/global-hamburger-menu-btn";
+@import "template-parts/components/back-to-top-button";
 
 // Підключення стилів окремих блоків partials
 @import "template-parts/global-header";

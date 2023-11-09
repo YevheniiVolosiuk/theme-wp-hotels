@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main class="facility-page">
-  <section class="facility-page__hero text-hero-section">
+  <section class="facility-page__hero text-hero-section" data-watch>
     <div class="text-hero-section__container">
       <h1 class="text-hero-section__title">“Safe” restaurant</h1>
       <div class="text-hero-section__left">
@@ -58,7 +58,7 @@ get_header();
         <div class="design-section__box-mobile"></div>
         <svg class="design-section__decore-wave" viewBox="0 0 1024 298" fill="none">
           <path opacity="0.12" d="M1028 214.501C939.5 262.957 782.316 390.114 552.02 180.157C292.634 -56.3214 -16.5 -71.9988 -319.5 214.501" stroke="#FFFCF6"/>
-        </svg> 
+        </svg>
       </div>
     </div>
   </section>
@@ -67,8 +67,8 @@ get_header();
     <div class="section-touch__container">
       <div class="section-touch__info --text-white">
         <div class="section-touch__inner">
-          <a href="tel:380322975020" class="section-touch__phone --bg-line-opacity">+38 032 297 50 20</a>
-          <address class="section-touch__address">8 Lystopadovoho Chynu,Lviv</address>
+          <a href="tel:380322975020" class="section-touch__phone --bg-line-opacity">+35 032 365 50 20</a>
+          <address class="section-touch__address">8 Loreppusaetew Chynu,Lonber</address>
         </div>
       </div>
 
@@ -104,7 +104,7 @@ get_header();
                   <path d="M16.4688 1C16.4688 1 14.1354 1.61538 12.1354 3.46154C10.1354 5.30769 8.46875 8.38462 8.46875 8.38462C8.46875 8.38462 6.80208 5.30769 4.80208 3.46154C2.80208 1.61538 0.46875 0.999999 0.46875 0.999999" stroke="#FCD043" stroke-width="2" />
                 </svg>
               </div>
-              <button type="submit" class="reservation-form__button --button-yellow">book room</button>
+              <button type="submit" class="reservation-form__button reservation-form__button--bg-yellow">book room</button>
             </div>
           </form>
         </div>

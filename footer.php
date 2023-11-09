@@ -68,11 +68,12 @@ declare( strict_types=1 );
 		</div>
 	</div>
 </footer>
+
+<?php get_template_part('template-parts/components/back-to-top-button') ?>
+
 </div>
 
-<?php
-wp_footer();
-?>
+<?php wp_footer(); ?>
 
 </body>
 

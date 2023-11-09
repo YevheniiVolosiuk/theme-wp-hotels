@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main class="page-room">
-  <section class="page-room__full-hero full-section-hero">
+  <section class="page-room__full-hero full-section-hero" data-watch>
     <div class="full-section-hero__container">
       <div class="full-section-hero__content">
         <h1 class="full-section-hero__title">Superior twin</h1>
@@ -77,8 +77,8 @@ get_header();
     <div class="section-touch__container">
       <div class="section-touch__info">
         <div class="section-touch__inner">
-          <a href="tel:380322975020" class="section-touch__phone">+38 032 297 50 20</a>
-          <address class="section-touch__address">8 Lystopadovoho Chynu,Lviv</address>
+          <a href="tel:380322975020" class="section-touch__phone">+25 032 297 45 20</a>
+          <address class="section-touch__address">8 Loreppusaetew Chynu,Lonber</address>
         </div>
       </div>
 
