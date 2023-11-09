@@ -1,9 +1,5 @@
 .facility-page {
   background-color: $bgPrimary;
-  margin-top: toRem(105);
-  @media (max-width: $tablet) {
-    margin-top: toRem(80);
-  }
   // .facility-page__hero
   &__hero {
   }
@@ -25,6 +21,7 @@
 }
 
 .text-hero-section {
+  background-color: $bgPrimary;
   // .text-hero-section__container
   &__container {
     position: relative;
@@ -43,7 +40,7 @@
     @include adaptiveValue('font-size', 150, 60, 0, 1920, 375);
     line-height: em(130, 150);
     color: $textYellow;
-    z-index: 1;
+    z-index: $z-index-bottom-level;
   }
   // .text-hero-section__left
   &__left {

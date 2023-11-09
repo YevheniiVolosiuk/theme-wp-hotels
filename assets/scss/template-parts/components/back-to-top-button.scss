@@ -1,0 +1,46 @@
+.back-to-top-button {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 8%;
+  right: 5%;
+  width: toRem(70);
+  height: toRem(70);
+  border-radius: 50px;
+  z-index: $z-index-middle-level;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+
+  //&:hover{
+  //  transform: rotate(180deg);
+  //}
+
+  //&:hover.back-to-top-button--up{
+  //  transform: rotate(-360deg);
+  //}
+
+  &--up{
+    transform: rotate(180deg);
+  }
+
+  &--up &__arrow{
+    animation: arrowUp $duration-full alternate infinite;
+  }
+
+  &__border{
+    color: $bgPrimary;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  &__arrow{
+    position: absolute;
+    top:      calc(50% - 5px) ;
+    left: calc(50% - 10px) ;
+    width: toRem(20);
+    height: toRem(15);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    animation: arrowDown 0.8s alternate infinite;
+  }
+}

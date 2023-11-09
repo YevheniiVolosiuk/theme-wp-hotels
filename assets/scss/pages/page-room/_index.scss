@@ -1,9 +1,4 @@
 .page-room {
-  margin-top: toRem(105);
-
-  @media (max-width: $tablet) {
-    margin-top: toRem(80);
-  }
   // .page-room__full-hero
   &__full-hero {
     position: relative;
@@ -185,7 +180,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: $z-index-bottom-level;
     img {
       object-position: left bottom;
       @media (max-width: $tablet) {
@@ -200,7 +195,7 @@
     left: 0;
     @include adaptiveValue('width', 1920, 375, 0, 1920, 375);
     @include adaptiveValue('height', 643, 165, 0, 1920, 375);
-    z-index: 1;
+    z-index: $z-index-bottom-level;
   }
 }
 
