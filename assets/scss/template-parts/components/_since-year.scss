@@ -8,6 +8,9 @@
 		border: 1px solid $borderSecondary-32;
 		border-radius: toRem(50);
 
+		transition: all $duration-full $easing-material;
+
+
 		@include adaptiveValue("font-size", 22, 15, 0, 1920, 992);
 
 		span {
@@ -20,6 +23,7 @@
 			width: em(35);
 			height: em(35);
 			margin-right: em(23);
+			animation: endlessRotation $duration-slow linear infinite;
 		}
 	}
 }

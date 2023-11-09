@@ -109,6 +109,8 @@
       width: em(150, 300);
       height: em(150, 300);
 
+      animation: endlessRotation $duration-slow linear infinite;
+
       @include adaptiveValue('margin-left', 40, 30, 2, 992, 480);
     }
   }
@@ -117,7 +119,7 @@
   &__right {
     position: absolute;
     right: 0;
-    z-index: 10;
+    z-index: $z-index-bottom-level;
     font-family: $fontMiracle;
     color: $textYellow;
     text-transform: uppercase;
