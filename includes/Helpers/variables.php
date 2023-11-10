@@ -43,14 +43,25 @@ if ( ! defined('STM_VITE_LOCAL_URI')) {
     define('STM_VITE_LOCAL_URI', VITE_SERVER . '/assets');
 }
 
-if ( ! defined('STM_BUILD_URI')) {
-    define('STM_BUILD_URI', STM_DIR_URI . '/dist/assets');
+if (IS_TYPE_LOCAL){
+    if ( ! defined('STM_BUILD_URI')) {
+        define('STM_BUILD_URI', STM_DIR_URI . '/dist/assets');
+    }
+
+    if ( ! defined('STM_BUILD_PATH')) {
+        define('STM_BUILD_PATH', STM_DIR_PATH . '/dist/assets');
+    }
 }
 
-if ( ! defined('STM_BUILD_PATH')) {
-    define('STM_BUILD_PATH', STM_DIR_PATH . '/dist/assets');
-}
+if(IS_TYPE_PRODUCTION){
+    if ( ! defined('STM_BUILD_URI')) {
+        define('STM_BUILD_URI', STM_DIR_URI . '/assets');
+    }
 
+    if ( ! defined('STM_BUILD_PATH')) {
+        define('STM_BUILD_PATH', STM_DIR_PATH . '/assets');
+    }
+}
 
 /**
  * Build Assets Paths & Uri
@@ -88,7 +99,7 @@ if ( ! defined('STM_LOCAL_IMAGES_URI')) {
 }
 
 if ( ! defined('STM_BUILD_IMAGES_URI')) {
-    define('STM_BUILD_IMAGES_URI', STM_BUILD_URI . '/static/images/');
+    define('STM_BUILD_IMAGES_URI', STM_DIR_URI . '/static/images/');
 }
 
 if ( ! defined('STM_BUILD_IMAGES_DIR_PATH')) {

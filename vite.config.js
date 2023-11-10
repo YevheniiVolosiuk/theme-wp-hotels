@@ -1,13 +1,20 @@
 import fs from 'fs';
-import { resolve,join } from 'path';
+import { resolve,basename} from 'path';
 import { defineConfig } from 'vite';
 import { liveReload } from 'vite-plugin-live-reload';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 //import svgSpritePlugin from 'vite-plugin-svg-sprite-component';
 
+// Get the main root folder name
+const rootFolderName = basename(__dirname);
+// Dir to theme static folder files
+const staticFolderBaseDir = `/wp-content/themes/${rootFolderName}/static`;
+
+
 const root = resolve(__dirname, '.');
 const outDir = resolve(__dirname, 'dist');
+
 
 // Get all files and directories in the src directory
 const srcDirectoryContents = fs.readdirSync(root);
@@ -83,7 +90,7 @@ export default defineConfig({
           }
 
           if (/\.(woff|woff2)$/.test(name ?? '')) {
-            return 'assets/fonts/[name].[ext]';
+            return 'static/fonts/[name].[ext]';
           }
 
           return 'assets/[name].[ext]';
@@ -94,15 +101,17 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `$base-dir: ${'development' === process.env.NODE_ENV ? "'http://localhost:3000/'" : "'/'"};`,
+        additionalData: `$base-dir: ${'development' === process.env.NODE_ENV ? "'http://localhost:3000/'" : "'/'"};
+        $static-base-dir: ${'development' === process.env.NODE_ENV ? "'http://localhost:3000/'" : `${staticFolderBaseDir}`};
+        `,
       },
     },
   },
-  resolve: {
-    alias: {
-      '@assets': resolve(__dirname + `/assets`),
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     '@assets': resolve(__dirname + `/assets`),
+  //   },
+  // },
   server: {
     cors: true,
     strictPort: true,
