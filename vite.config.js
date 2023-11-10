@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { resolve } from 'path';
+import { resolve,join } from 'path';
 import { defineConfig } from 'vite';
 import { liveReload } from 'vite-plugin-live-reload';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
@@ -12,9 +12,38 @@ const outDir = resolve(__dirname, 'dist');
 // Get all files and directories in the src directory
 const srcDirectoryContents = fs.readdirSync(root);
 
-const excludeItemContents = ['assets', 'admin', 'vendor', 'node_modules', '_dist'];
-// Extract files and directories other than assets and admin folder
-const nonAssetsContents = srcDirectoryContents.filter((item) => !excludeItemContents.includes(item));
+// Exclusions files and folder in root dir
+const exclusionItems = ['node_modules', 'dist', 'vendor', 'vite.config.js', 'assets', '.mjs'];
+
+// Allowed files and folders to copy into dist folder
+const filteredContents = filterProjectContents(srcDirectoryContents, exclusionItems);
+
+function filterProjectContents(contentsDir, exclusions = []) {
+  return contentsDir.reduce((filteredItems, item) => {
+    // Exclude all folders and files that start with a dot
+    if (item.startsWith('.')) {
+      return filteredItems;
+    }
+
+    let shouldExclude = false;
+
+    // Check if the item matches any exclusion criteria
+    for (const exclusion of exclusions) {
+      if (item.includes(exclusion) || item.endsWith(exclusion) || item.startsWith(exclusion)) {
+        shouldExclude = true;
+        break;
+      }
+    }
+
+    // Include the item only if it does not match any exclusion criteria
+    if (!shouldExclude) {
+      filteredItems.push(item);
+    }
+
+    return filteredItems;
+  }, []);
+}
+
 
 export default defineConfig({
   root,
@@ -22,7 +51,7 @@ export default defineConfig({
     liveReload('./**/*.php'),
     viteStaticCopy({
       // Copy files and directories other than excludeItemContents
-      targets: nonAssetsContents.map((item) => ({
+      targets: filteredContents.map((item) => ({
         src: `./${item}`,
         dest: './',
       })),
