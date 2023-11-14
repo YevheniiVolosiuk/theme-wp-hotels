@@ -23,4 +23,4 @@ declare(strict_types=1);
     get_template_part('./partials/helper-grid') ?>
 <div class="wrapper">
 
-  <?php get_template_part('./template-parts/header-modern') ?>
+  <?php get_template_part('./template-parts/header/global-header') ?>

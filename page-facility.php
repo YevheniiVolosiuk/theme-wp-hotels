@@ -11,10 +11,10 @@ get_header();
       </div>
       <div class="text-hero-section__right">
         <p class="text-hero-section__text">Bank Hotel proudly welcomes you to the Safe Restaurant, a place where you will wish you could dine every day. The restaurant offers a unique menu developed by the team of professionals led by chef Mary-Ann Jones, the wine list with more than 250 items, the outstanding service, and the unforgettable atmosphere.</p>
-        <svg class="text-hero-section__decore-vetical-line"  viewBox="0 0 1384 696" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class=" text-hero-section__decore-rainbow"  viewBox="0 0 1384 696" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 696C1 312.162 310.595 1 692.5 1C1074.4 1 1384 312.162 1384 696" stroke="#3F5148" />
         </svg>
-        <svg class="text-hero-section__decore-rainbow" viewBox="0 0 2 1250" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="text-hero-section__decore-vetical-line" viewBox="0 0 2 1250" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 0L0.999945 1250" stroke="#3F5148" />
         </svg>
       </div>

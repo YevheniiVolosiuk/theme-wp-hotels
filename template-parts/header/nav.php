@@ -20,7 +20,7 @@ use StarterThemeWp\STW\Classes\CustomNavWalker;
         'container_class' => 'global-menu__body',
         'menu_id'         => 'nav-menu',
         'menu_class'      => 'nav__list',
-        'depth'           => 0,
+        'depth'           => 4,
         'fallback_cb'     => 'CustomNavWalker::fallback',
         'walker'          => new CustomNavWalker(),
     ]); ?>

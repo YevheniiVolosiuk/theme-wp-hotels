@@ -15,12 +15,13 @@
     @include adaptiveValue('padding-bottom', 200, 80);
   }
 
-  &__touch{
+  &__touch {
     @include adaptiveValue('padding-bottom', 200, 80);
   }
 }
 
 .text-hero-section {
+  overflow: hidden;
   background-color: $bgPrimary;
   // .text-hero-section__container
   &__container {
@@ -73,16 +74,25 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include adaptiveValue('width', 1384, 275, 0, 1920, 375);
-    @include adaptiveValue('height', 696, 139, 0, 1920, 375);
+    width: 2px;
+    height: 100%;
+    @media (max-width:$tablet){
+      display: none;
+    }
   }
   // .text-hero-section__decore-rainbow
   &__decore-rainbow {
     position: absolute;
     top: 0;
     left: 0;
-    width: 2px;
-    height: 100%;
+    @include adaptiveValue('width', 1384, 275, 0, 1920, 375);
+    @include adaptiveValue('height', 696, 139, 0, 1920, 375);
+    @media (max-width:$tablet){
+      display: none;
+    }
+    @media (min-width: 1980px) {
+      display: none;
+    }
   }
   // .text-hero-section__text
   &__text {
