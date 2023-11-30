@@ -6,7 +6,7 @@
  * @package stw
  */
 
-use StarterThemeWp\STW\Classes\CustomNavWalker;
+use StarterThemeWp\STW\Classes\Theme\Menu\CustomWalkers\GlobalHeaderNavWalker;
 
 ?>
 
@@ -22,7 +22,7 @@ use StarterThemeWp\STW\Classes\CustomNavWalker;
         'menu_class'      => 'nav__list',
         'depth'           => 4,
         'fallback_cb'     => 'CustomNavWalker::fallback',
-        'walker'          => new CustomNavWalker(),
+        'walker'          => new GlobalHeaderNavWalker(),
     ]); ?>
 
   <div class='global-header__mobile-footer header-mobile-footer'>

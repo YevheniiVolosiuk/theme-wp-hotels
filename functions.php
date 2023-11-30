@@ -15,7 +15,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 }
 
 function initThemeInstance() {
-	\StarterThemeWp\STW\Classes\Theme::getInstance();
+	\StarterThemeWp\STW\Classes\Theme\Theme::getInstance();
 }
 
 initThemeInstance();

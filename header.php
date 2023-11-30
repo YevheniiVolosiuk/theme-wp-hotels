@@ -13,8 +13,11 @@ declare(strict_types=1);
   <link rel="apple-touch-icon" sizes="180x180" href="<?= vite_src_static('apple-touch-icon.png'); ?>">
   <link rel="icon" type="image/png" sizes="32x32" href="<?= vite_src_static('favicon-32x32.png'); ?>">
   <link rel="icon" type="image/png" sizes="16x16" href="<?= vite_src_static('favicon-16x16.png'); ?>">
-  <!--=============== REMIXICONS ICONS ===============-->
+
+  <!--TODO: delete this fonts or download them and connect through enqueue script-->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!--TODO: delete this fonts or download them and connect through enqueue script-->
+
     <?php wp_head(); ?>
 </head>
 
