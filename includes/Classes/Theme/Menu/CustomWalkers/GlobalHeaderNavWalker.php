@@ -1,10 +1,12 @@
 <?php
 
-namespace StarterThemeWp\STW\Classes;
+namespace StarterThemeWp\STW\Classes\Theme\Menu\CustomWalkers;
 
+use StarterThemeWp\STW\Classes\stdClass;
+use StarterThemeWp\STW\Classes\WP_Post;
 use Walker;
 
-class CustomNavWalker extends Walker
+class GlobalHeaderNavWalker extends Walker
 {
     /**
      * What the class handles.

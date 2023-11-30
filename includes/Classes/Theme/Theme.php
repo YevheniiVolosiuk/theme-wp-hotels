@@ -3,8 +3,12 @@
 declare(strict_types=1);
 
 
-namespace StarterThemeWp\STW\Classes;
+namespace StarterThemeWp\STW\Classes\Theme;
 
+use StarterThemeWp\STW\Classes\Customizer\ThemeCustomizer;
+use StarterThemeWp\STW\Classes\Theme\Menu\Menu;
+use StarterThemeWp\STW\Classes\Theme\Snippets\ActivateSnippets;
+use StarterThemeWp\STW\Classes\Theme\Snippets\DisableSnippets;
 use StarterThemeWp\STW\Traits\SingletonTrait;
 
 /**
@@ -28,19 +32,22 @@ class Theme
          */
         define('THEME_DOMAIN', self::$domain);
 
-        //		WordpressViteManifest::getInstance();
-
         /**
-         * Helper classes
+         * Load Snippets Classes
          */
         ActivateSnippets::getInstance();
         DisableSnippets::getInstance();
 
         /**
-         * Theme classes
+         * Load Theme Classes
          */
         Assets::getInstance();
-        Menus::getInstance();
+        Menu::getInstance();
+
+        /**
+         * Load Customizer
+         */
+        ThemeCustomizer::getInstance();
 
         /**
          * Load all hooks

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace StarterThemeWp\STW\Classes;
+namespace StarterThemeWp\STW\Classes\Theme\Menu;
 
 use StarterThemeWp\STW\Traits\SingletonTrait;
 
-class Menus
+class Menu
 {
     use SingletonTrait;
 

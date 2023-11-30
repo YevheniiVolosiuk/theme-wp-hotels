@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace StarterThemeWp\STW\Classes;
+namespace StarterThemeWp\STW\Classes\Theme\Snippets;
 
 use StarterThemeWp\STW\Traits\SingletonTrait;
 
@@ -20,9 +20,10 @@ class DisableSnippets
          * Init Snippets
          */
 
+        $this->disableEmojis();
         $this->disableCompletelyComments();
         $this->disableAutomaticUpdatesInWP();
-        $this->disableEmojis();
+        $this->disableGlobalStylesInlineCss();
 
         add_filter('wp_default_scripts', [$this, 'disableJqueryMigrate']);
 
@@ -35,7 +36,7 @@ class DisableSnippets
         /**
          * Disable WordPress Admin Bar for all users in the frontend
          */
-        add_filter( 'show_admin_bar', '__return_false' );
+        add_filter('show_admin_bar', '__return_false');
 
         /**
          * On sites running WordPress 3.5+, disable XML-RPC completely.
@@ -181,5 +182,17 @@ class DisableSnippets
             $scripts->remove('jquery');
             $scripts->add('jquery', false, ['jquery-core'], '1.10.2');
         }
+    }
+
+    /**
+     * Dequeue wp global styles inline css output from wp_head().
+     *
+     * @return void
+     */
+    public function disableGlobalStylesInlineCss()
+    {
+        add_action('wp_enqueue_scripts', function () {
+            wp_dequeue_style('global-styles');
+        });
     }
 }

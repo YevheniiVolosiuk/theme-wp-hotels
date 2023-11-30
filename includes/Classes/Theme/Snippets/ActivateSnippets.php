@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace StarterThemeWp\STW\Classes;
+namespace StarterThemeWp\STW\Classes\Theme\Snippets;
 
 use StarterThemeWp\STW\Traits\SingletonTrait;
 
