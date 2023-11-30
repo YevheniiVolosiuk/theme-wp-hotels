@@ -1,5 +1,5 @@
 .facility-page {
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
   // .facility-page__hero
   &__hero {
   }
@@ -22,7 +22,7 @@
 
 .text-hero-section {
   overflow: hidden;
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
   // .text-hero-section__container
   &__container {
     position: relative;
@@ -51,7 +51,7 @@
     font-family: $fontMiracle;
     @include adaptiveValue('font-size', 60, 24, 0, 1920, 375);
     text-transform: capitalize;
-    color: $textSecondary;
+    color: var(--textSecondary);
     @include adaptiveValue('padding-top', 330, 220, 0, 1920, 998);
     @include adaptiveValue('padding-bottom', 250, 90, 0, 1920, 998);
     @media (max-width: $mobile) {
@@ -131,7 +131,7 @@
     @include adaptiveValue('font-size', 50, 30, 0, 1920, 375);
     @include adaptiveValue('letter-spacing', 1.08, 0.9, 0, 1920, 375);
     text-transform: capitalize;
-    color: $textSecondary;
+    color: var(--textSecondary);
     margin-bottom: 40px;
     @include adaptiveValue('margin-bottom', 40, 20, 0, 1920, 375);
   }
@@ -195,7 +195,7 @@
     font-family: $fontMiracle;
     @include adaptiveValue('font-size', 40, 30, 0, 1920, 375);
     @include adaptiveValue('letter-spacing', 1.2, 0.9, 0, 1920, 375);
-    color: $textSecondary;
+    color: var(--textSecondary);
     @include adaptiveValue('margin-right', 110, 0, 0, 1920, 998);
     @include adaptiveValue('padding-bottom', 100, 70, 0, 1920, 375);
   }
@@ -236,7 +236,7 @@
     font-family: $fontMiracle;
     @include adaptiveValue('font-size', 36, 30, 0, 998, 375);
     letter-spacing: em(1.08, 36);
-    color: $textSecondary;
+    color: var(--textSecondary);
     text-transform: capitalize;
   }
   // .design-section__text

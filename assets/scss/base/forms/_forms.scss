@@ -28,7 +28,7 @@
 		margin-bottom: toRem(50);
 		font-size: 26px;
 		text-transform: uppercase;
-		color: $textSecondary;
+		color: var(--textSecondary);
 
 		&--disable {
 			display: none;
@@ -46,7 +46,7 @@
 		grid-template-columns: repeat(2, 1fr) toRem(285);
 		max-width: toRem(935);
 		min-height: toRem(140);
-		border: 1px solid $bgPrimary;
+		border: 1px solid var(--bgPrimary);
 
 		&--border-transparent {
 			border: 0 solid transparent;
@@ -103,11 +103,11 @@
 	&__button {
 		font-weight: 500;
 		line-height: math.div(20, 18);
-		color: $textSecondary;
+		color: var(--textSecondary);
 		text-align: center;
 		text-transform: uppercase;
-		background-color: $bgPrimary;
-		border: 1px solid $borderPrimary;
+		background-color: var(--bgPrimary);
+		border: 1px solid var(--borderPrimary);
   }
 }
 

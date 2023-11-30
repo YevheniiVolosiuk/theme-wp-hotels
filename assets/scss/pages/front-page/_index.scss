@@ -21,7 +21,7 @@
 .section-hero {
   @include adaptiveValue('padding-top', 40, 10);
 
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
 
   //  background-color: green;
   // .section-hero__container
@@ -58,7 +58,7 @@
     @include adaptiveValue('font-size', 220, 65, 0, 1920, 480);
 
     line-height: math.div(200, 220);
-    color: $textSecondary;
+    color: var(--textSecondary);
 
     @include adaptiveValue('margin-bottom', 60, 20, 0, 1920, 768);
 
@@ -132,7 +132,7 @@
 .section-book {
   position: relative;
   padding-bottom: toRem(100);
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
 
   // section-book__container
   &__container {
@@ -159,9 +159,9 @@
 
 // About Us ===============================================================================================================================================================================================================================================================================================
 .section-about {
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
   @include adaptiveValue('padding-bottom', 300, 100);
-  color: $textSecondary;
+  color: var(--textSecondary);
 
   // .section-about__container
   &__container {

@@ -19,7 +19,7 @@
 			width: 100%;
 			height: toRem(1);
 			content: "";
-			background-color: $textSecondary;
+			background-color: var(--textSecondary);
 			transition: all 0.3s ease 0s;
 		}
 

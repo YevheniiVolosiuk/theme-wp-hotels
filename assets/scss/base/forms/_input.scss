@@ -11,7 +11,7 @@ textarea {
 //          font-weight: 500;
 //          line-height: math.div(20 , 16);
 //          text-transform: uppercase;
-//          color: $bgPrimary;
+//          color: var(--bgPrimary);
 // .input {
 //  display: block;
 //  width: 100%;
@@ -40,7 +40,7 @@ textarea {
 	font-size: toRem(16);
 	font-weight: 500;
 	line-height: math.div(20, 16);
-	color: $textPrimary;
+	color: var(--textPrimary);
 	text-transform: uppercase;
 	//border-radius: 0 !important;
 
@@ -52,13 +52,13 @@ textarea {
 	//  &._form-error {
 	//  }
 	&--text-white {
-		color: $textSecondary;
+		color: var(--textSecondary);
 	}
 }
 
 .reservation-form__input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
-		color: $textPrimary;
+		color: var(--textPrimary);
 		opacity: 1;
 		transition: opacity 0.3s;
 	}
@@ -66,7 +66,7 @@ textarea {
 
 .reservation-form__input--text-white[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
-		color: $textSecondary;
+		color: var(--textSecondary);
 	}
 }
 

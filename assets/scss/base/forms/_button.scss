@@ -17,17 +17,17 @@
 .reservation-form__button {
 	font-weight: 500;
 	line-height: math.div(20, 18);
-	color: $textSecondary;
+	color: var(--textSecondary);
 	text-align: center;
 	text-transform: uppercase;
-	background-color: $bgPrimary;
-	border: 1px solid $borderPrimary;
+	background-color: var(--bgPrimary);
+	border: 1px solid var(--borderPrimary);
 	transition: background-color$duration-base$easing-transform;
 
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: $bgYellow;
-			color: $textPrimary;
+			color: var(--textPrimary);
 			border: 1px solid $bgYellow;
 		}
 	}
@@ -35,17 +35,17 @@
 	&--bg-yellow {
 		background-color: $bgYellow;
 		border: 1px solid transparent;
-		color: $textPrimary;
+		color: var(--textPrimary);
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $bgPrimary;
-				color: $textSecondary;
+				background-color: var(--bgPrimary);
+				color: var(--textSecondary);
 			}
 		}
 
 		//--button-yellow{
 			//background-color: $bgYellow;
-			//color: $textPrimary;
+			//color: var(--textPrimary);
 		//}
 	}
 }
@@ -111,7 +111,7 @@
 	span {
 		display: inline-block;
 		text-align: center;
-		color: $textSecondary;
+		color: var(--textSecondary);
 	}
 	.circle {
 		position: absolute;

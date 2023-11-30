@@ -100,7 +100,7 @@
 }
 
 .description-section {
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
   // .description-section__container
   &__container {
     display: flex;
@@ -111,7 +111,7 @@
     column-gap: toRem(25);
     max-width: toRem(1545);
     margin: 0 auto;
-    color: $textSecondary;
+    color: var(--textSecondary);
   }
   // .description-section__left
   &__left {
@@ -152,7 +152,7 @@
 
 .preview-section {
   position: relative;
-  background-color: $bgPrimary;
+  background-color: var(--bgPrimary);
   @include adaptiveValue('padding-top', 65, 30, 0, 1920, 375);
   min-height: 100vh;
   // .preview-section__container
@@ -280,7 +280,7 @@
     max-width: toRem(255);
     font-size: 26px;
     text-transform: uppercase;
-    color: $textPrimary;
+    color: var(--textPrimary);
     padding: em(19, 26) em(39, 26) em(15, 26) em(39, 26);
     border-radius: toRem(100);
     border: 1px solid $borderPrimary-8;
